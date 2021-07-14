@@ -1,0 +1,26 @@
+{
+  "name": "@rbxts/roselect",
+  "version": "0.0.1",
+  "description": "Simple “selector” library for Rodux",
+  "main": "src/init.lua",
+  "typings": "src/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "Roblox",
+    "roselect"
+  ],
+  "author": "Rimuy",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^1.2.2-types.0",
+    "@rbxts/types": "^1.0.503"
+  }
+}
