@@ -4,9 +4,6 @@
   "description": "Simple “selector” library for Rodux",
   "main": "src/init.lua",
   "typings": "src/index.d.ts",
-  "scripts": {
-    "prepublishOnly": "npm run build"
-  },
   "keywords": [
     "Roblox",
     "roselect"
