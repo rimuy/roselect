@@ -6,5 +6,6 @@ license="MIT"
 authors=["Rimuy"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+exclude = ["*.d.ts"]
 
 [dependencies]
