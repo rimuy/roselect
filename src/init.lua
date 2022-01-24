@@ -2,9 +2,22 @@ local function defaultEqualityCheck(a, b)
 	return a == b
 end
 
+local function isDictionary(tbl)
+	if type(value) ~= "table" then
+		return false
+	end
+
+	for k, _ in pairs(tbl) do
+		if type(k) ~= "number" then
+			return true
+		end
+	end
+	
+	return false
+end
+
 local function isDependency(value)
-	return type(value) ~= "function"
-	and type(value) == "table" and value["dependencies"] == nil
+	return type(value) == "table" and isDictionary(value) == false and value["dependencies"] == nil
 end
 
 local function reduce(tbl, callback, initialValue)
@@ -32,7 +45,7 @@ local function areArgumentsShallowlyEqual(equalityCheck, prev, nextValue)
 	return true
 end
 
-function defaultMemoize(func, equalityCheck)
+local function defaultMemoize(func, equalityCheck)
 	if equalityCheck == nil then
 		equalityCheck = defaultEqualityCheck
 	end
@@ -53,7 +66,7 @@ function defaultMemoize(func, equalityCheck)
 end
 
 local function getDependencies(funcs)
-	local dependencies = isDependency(funcs[1]) and funcs[1] or funcs
+	local dependencies = if isDependency(funcs[1]) then first else funcs
 
 	for _, dep in ipairs(dependencies) do
 		if isDependency(dep) then

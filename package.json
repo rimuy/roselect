@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/roselect",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Simple “selector” library for Rodux",
   "main": "src/init.lua",
   "typings": "src/index.d.ts",
@@ -12,10 +12,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HylianBasement/roselect.git"
+    "url": "git+https://github.com/Rimuy/roselect.git"
   },
   "bugs": {
-    "url": "https://github.com/HylianBasement/roselect/issues"
+    "url": "https://github.com/Rimuy/roselect/issues"
   },
   "files": [
     "src"
