@@ -66,7 +66,7 @@ local function defaultMemoize(func, equalityCheck)
 end
 
 local function getDependencies(funcs)
-	local dependencies = if isDependency(funcs[1]) then first else funcs
+	local dependencies = if isDependency(funcs[1]) then funcs[1] else funcs
 
 	for _, dep in ipairs(dependencies) do
 		if isDependency(dep) then
@@ -125,8 +125,9 @@ local createSelector = createSelectorCreator(defaultMemoize)
 
 local function createStructuredSelector(selectors, selectorCreator)
 	if type(selectors) ~= "table" then
-		local errMsg = "createStructuredSelector expects first argument to be an object where each property is a selector, instead received a %s"
-		error((errMsg):format(type(selectors)), 2)
+		error((
+			"createStructuredSelector expects first argument to be an object where each property is a selector, instead received a %s"
+		):format(type(selectors)), 2)
 	elseif selectorCreator == nil then
 		selectorCreator = createSelector
 	end

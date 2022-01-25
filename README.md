@@ -1,18 +1,22 @@
-<div align="center"><img src="https://i.imgur.com/LxEjWku.png"></img></div>
-<div align="center"><h1>Roselect</h1></div>
-<div align="center">
-	<a href="https://www.npmjs.com/package/@rbxts/roselect">
-		<img src="https://badge.fury.io/js/%40rbxts%2Froselect.svg"></img>
-	</a>
-</div>
-<div align="center">
-        Simple “selector” library for Rodux, ported from javascript's 
-        <a href="https://www.npmjs.com/package/reselect">reselect</a>
-        library.
+<div>
+        <img align="left" src="https://i.imgur.com/LxEjWku.png" height="200" width="200">
+                <h1><code>roselect</code></h1>
+                <p>
+			Composable data selectors, ported from JS's 
+			<a href="https://www.npmjs.com/package/reselect">reselect</a>.
+		</p> 
+        </img>
 </div>
 
+---
+
+[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Package](https://badge.fury.io/js/%40rbxts%2Fgamejoy.svg)](https://www.npmjs.com/package/@rbxts/roselect)
+<br/>
+<br/>
+
 ## Usability
-* Selectors can compute derived data, allowing Redux to store the minimal possible state.
+* Selectors can compute derived data, allowing state managers to store the minimal possible state.
 * Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
 * Selectors are composable. They can be used as input to other selectors.
 
