@@ -2,22 +2,18 @@ local function defaultEqualityCheck(a, b)
 	return a == b
 end
 
-local function isDictionary(tbl)
+local function isArray(tbl)
 	if type(value) ~= "table" then
 		return false
 	end
 
 	for k, _ in pairs(tbl) do
 		if type(k) ~= "number" then
-			return true
+			return false
 		end
 	end
 	
-	return false
-end
-
-local function isDependency(value)
-	return type(value) == "table" and isDictionary(value) == false and value["dependencies"] == nil
+	return true
 end
 
 local function reduce(tbl, callback, initialValue)
@@ -66,10 +62,10 @@ local function defaultMemoize(func, equalityCheck)
 end
 
 local function getDependencies(funcs)
-	local dependencies = if isDependency(funcs[1]) then funcs[1] else funcs
+	local dependencies = if isArray(funcs[1]) then funcs[1] else funcs
 
 	for _, dep in ipairs(dependencies) do
-		if isDependency(dep) then
+		if type(dep) ~= "function" then
 			error("Selector creators expect all input-selectors to be functions.", 2)
 		end
 	end
