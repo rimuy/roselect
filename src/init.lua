@@ -3,7 +3,7 @@ local function defaultEqualityCheck(a, b)
 end
 
 local function isArray(tbl)
-	if type(value) ~= "table" then
+	if type(tbl) ~= "table" then
 		return false
 	end
 
