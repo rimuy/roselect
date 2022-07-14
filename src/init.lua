@@ -12,7 +12,7 @@ local function isArray(tbl)
 			return false
 		end
 	end
-	
+
 	return true
 end
 

@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/roselect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple “selector” library for Rodux",
   "main": "src/init.lua",
   "typings": "src/index.d.ts",
