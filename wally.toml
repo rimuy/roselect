@@ -1,11 +1,11 @@
 [package]
 name = "rimuy/roselect"
 description="Composable data selectors library"
-version = "0.1.2"
+version = "0.1.3"
 license="MIT"
 authors=["Rimuy"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-exclude = ["*.d.ts"]
+exclude = ["*.d.ts", "sourcemap.json", "node_modules", "Packages"]
 
 [dependencies]
